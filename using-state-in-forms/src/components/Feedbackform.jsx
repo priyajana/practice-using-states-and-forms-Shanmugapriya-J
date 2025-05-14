@@ -18,7 +18,7 @@ export default function Feedbackform(){
         {
            
             const { name, value } = e.target; 
-            setCount(e.target.name == "feedback"? e.target.value.length:0);
+            setCount(e.target.name == "feedback"? e.target.value.length:formData.feedback.length);
 
             setFormData((prevData) => ({
                 ...prevData,
@@ -26,6 +26,9 @@ export default function Feedbackform(){
                 }));
 
         }
+    function handleSubmit(){
+        alert("Your form has been submitted!");
+    }
     return(
     <div>
                 <form>
@@ -61,7 +64,7 @@ export default function Feedbackform(){
                                      <p>Character limit: {count} / 200</p>
                             </label>
                             <br />
-                            <button  disabled={!formData.name || !formData.email || !formData.feedback}>Submit</button>
+                            <button onClick={handleSubmit}  disabled={!formData.name || !formData.email || !formData.feedback}>Submit</button>
 
             </form>
 
