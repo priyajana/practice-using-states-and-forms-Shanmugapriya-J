@@ -30,7 +30,7 @@ export default function Feedbackform(){
         alert("Your form has been submitted!");
     }
     return(
-    <div>
+    <div className="feedback">
                 <form>
                             <label>
                                     Name:
@@ -41,7 +41,7 @@ export default function Feedbackform(){
                                             onChange={handleChange}
                                     />
                             </label>
-                            <br />
+                          
                             <label>
                                     Email:
                                     <input
@@ -52,7 +52,7 @@ export default function Feedbackform(){
                                     />
                             </label>
                             <label>
-                            <br />
+                           
                                     Feedback:
                                     <textarea
                                         
@@ -63,7 +63,7 @@ export default function Feedbackform(){
                                     />
                                      <p>Character limit: {count} / 200</p>
                             </label>
-                            <br />
+                            
                             <button onClick={handleSubmit}  disabled={!formData.name || !formData.email || !formData.feedback}>Submit</button>
 
             </form>
