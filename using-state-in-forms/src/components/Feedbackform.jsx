@@ -1,6 +1,7 @@
 /**
  * REFERENCES
  * https://stackoverflow.com/questions/50516966/react-enable-button-after-all-form-fields-are-not-empty
+ * https://stackoverflow.com/questions/59835355/get-textarea-character-count-using-reactjs-with-help-of-usestate-hook
  */
 
 import React, { useState } from "react";
@@ -59,7 +60,7 @@ export default function Feedbackform(){
                                         name="feedback" // Matches formData key
                                         value={formData.feedback}
                                         onChange={handleChange}
-                                        maxLength={10}
+                                        maxLength={200}
                                     />
                                      <p>Character limit: {count} / 200</p>
                             </label>

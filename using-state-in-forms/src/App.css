@@ -16,7 +16,8 @@
   display:flex;
   flex-direction: column;
   align-items: left;
-  background-image: linear-gradient(to top right,#156eaa,white);
+  background-image: linear-gradient(to top right,#154919,white);
+  
 }
 
 input,textarea {
@@ -24,9 +25,15 @@ input,textarea {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: white;
+  color:black;
 }
 
 textarea{
    resize: vertical;
    min-height: 100px;
+}
+
+p
+{
+  padding: 5px;
 }
